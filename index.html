@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Number Guessing Game</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="card">
+    <h1>Number Guessing Game</h1>
+    <p class="subtitle">
+      I'm thinking of a number between <strong id="rangeMin">1</strong> and
+      <strong id="rangeMax">100</strong>. Can you guess it?
+    </p>
+
+    <form id="guessForm" novalidate>
+      <label for="guessInput">Your guess</label>
+      <div class="row">
+        <input type="number" id="guessInput" inputmode="numeric" placeholder="Enter a number" autofocus />
+        <button type="submit" id="guessBtn">Guess</button>
+      </div>
+    </form>
+
+    <p id="feedback" class="feedback" role="status" aria-live="polite">Make your first guess!</p>
+
+    <div class="stats">
+      <div class="stat">
+        <span class="stat-label">Attempts</span>
+        <span class="stat-value" id="attempts">0</span>
+      </div>
+      <div class="stat">
+        <span class="stat-label">Best score</span>
+        <span class="stat-value" id="best">–</span>
+      </div>
+    </div>
+
+    <div class="history">
+      <h2>Your guesses</h2>
+      <ul id="historyList"></ul>
+    </div>
+
+    <button id="playAgain" class="secondary hidden" type="button">Play again</button>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
